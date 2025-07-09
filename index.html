@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>災難後安心家訪地圖系統</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .main-container {
+            padding: 3rem 0;
+        }
+        .hero-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            padding: 3rem;
+            margin-bottom: 2rem;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        .card-header {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+            border-radius: 15px 15px 0 0 !important;
+            padding: 1.5rem;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        .status-completed {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .status-planning {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        .btn-main {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-main:hover {
+            background: linear-gradient(45deg, #0056b3, #004085);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,123,255,0.3);
+        }
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container main-container">
+        <!-- Hero Section -->
+        <div class="hero-section text-center">
+            <h1 class="display-4 mb-4">🗺️ 災難後安心家訪地圖系統</h1>
+            <p class="lead mb-4">Interactive Relief Visit Maps for Post-Disaster Care</p>
+            <p class="text-muted">為災難後安心家訪工作設計的互動式地圖系統，協助志工進行有效率的關懷訪問。</p>
+        </div>
+
+        <!-- Main Navigation -->
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="mb-0">🌪️ 2025年7月 丹娜絲颱風災後資料</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text mb-4">
+                            丹娜絲颱風災後安心家訪地圖資料，提供受災地區的詳細家訪路線規劃。
+                        </p>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center p-3 bg-light rounded">
+                                    <div class="feature-icon text-success">📍</div>
+                                    <div>
+                                        <h6 class="mb-1">七股區</h6>
+                                        <span class="status-badge status-completed">✅ 已完成</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center p-3 bg-light rounded">
+                                    <div class="feature-icon text-warning">📍</div>
+                                    <div>
+                                        <h6 class="mb-1">北門區</h6>
+                                        <span class="status-badge status-planning">🚧 規劃中</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center p-3 bg-light rounded">
+                                    <div class="feature-icon text-warning">📍</div>
+                                    <div>
+                                        <h6 class="mb-1">將軍區</h6>
+                                        <span class="status-badge status-planning">🚧 規劃中</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center p-3 bg-light rounded">
+                                    <div class="feature-icon text-warning">📍</div>
+                                    <div>
+                                        <h6 class="mb-1">學甲區</h6>
+                                        <span class="status-badge status-planning">🚧 規劃中</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <a href="202507-danas/" class="btn btn-main">
+                                進入丹娜絲颱風災後資料 →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Sidebar -->
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="mb-0">✨ 系統特色</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="feature-icon text-primary">🗺️</div>
+                            <div>
+                                <h6>互動式地圖</h6>
+                                <small class="text-muted">支援縮放、平移、標記點擊</small>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="feature-icon text-success">📱</div>
+                            <div>
+                                <h6>響應式設計</h6>
+                                <small class="text-muted">手機、平板、電腦完美適配</small>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="feature-icon text-info">🎯</div>
+                            <div>
+                                <h6>精確定位</h6>
+                                <small class="text-muted">每個地址都有精確的 GPS 座標</small>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="feature-icon text-warning">📊</div>
+                            <div>
+                                <h6>分組管理</h6>
+                                <small class="text-muted">合理的訪問路線分組，提高關懷效率</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-5">
+            <p class="text-white-50">
+                <small>
+                    Built with ❤️ for post-disaster relief efforts | 
+                    <a href="https://github.com/pichiu/relief-visit-map" class="text-white" target="_blank">
+                        GitHub Repository
+                    </a>
+                </small>
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

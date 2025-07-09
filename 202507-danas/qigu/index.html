@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>七股區 - 丹娜絲颱風災後安心家訪</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { 
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .main-container {
+            padding: 3rem 0;
+        }
+        .hero-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            padding: 3rem;
+            margin-bottom: 2rem;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        .card-header {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            border-radius: 15px 15px 0 0 !important;
+            padding: 1.5rem;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .btn-main {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-main:hover {
+            background: linear-gradient(45deg, #0056b3, #004085);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,123,255,0.3);
+        }
+        .btn-back {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            padding: 0.5rem 1.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-back:hover {
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            text-decoration: none;
+        }
+        .village-info {
+            background: rgba(0, 123, 255, 0.1);
+            border-left: 4px solid #007bff;
+            border-radius: 0 10px 10px 0;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .stats-grid {
+            background: linear-gradient(45deg, rgba(0, 123, 255, 0.1), rgba(0, 86, 179, 0.1));
+            border-radius: 15px;
+            padding: 2rem;
+        }
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        .feature-list li::before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container main-container">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <a href="../" class="btn-back">← 返回災後資料總覽</a>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="hero-section text-center">
+            <h1 class="display-5 mb-4">📍 七股區</h1>
+            <p class="lead mb-4">Qigu District - 丹娜絲颱風災後安心家訪</p>
+            <span class="status-badge">✅ 已完成區域</span>
+        </div>
+
+        <div class="row g-4">
+            <!-- Main Content -->
+            <div class="col-lg-8">
+                <!-- Village Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="mb-0">🏘️ 西寮里</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="village-info">
+                            <h5 class="text-primary mb-3">📋 基本資訊</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><strong>行政區域:</strong> 七股區西寮里</p>
+                                    <p><strong>完成狀態:</strong> <span class="text-success">✅ 已完成</span></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><strong>更新時間:</strong> 2025-07-09</p>
+                                    <p><strong>資料來源:</strong> 丹娜絲颱風災後調查</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h5 class="mb-3">🗺️ 可用地圖模式</h5>
+                        <ul class="feature-list">
+                            <li>多種訪問路線規劃模式</li>
+                            <li>3個訪問分組，涵蓋全里範圍</li>
+                            <li>詳細的地址定位和GPS座標</li>
+                            <li>響應式地圖設計，支援行動裝置</li>
+                            <li>互動式標記和路線顯示</li>
+                        </ul>
+
+                        <div class="text-center mt-4">
+                            <a href="xiliao/" class="btn btn-main btn-lg">
+                                進入西寮里地圖 →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Future Villages (Placeholder) -->
+                <div class="card mt-4">
+                    <div class="card-header" style="background: linear-gradient(45deg, #6c757d, #495057);">
+                        <h4 class="mb-0">🚧 未來規劃</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted mb-3">七股區其他里別將根據災情評估結果陸續納入家訪地圖系統：</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="p-3 bg-light rounded text-center">
+                                    <h6 class="text-muted">大埕里</h6>
+                                    <small class="text-muted">評估中</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 bg-light rounded text-center">
+                                    <h6 class="text-muted">竹橋里</h6>
+                                    <small class="text-muted">評估中</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 bg-light rounded text-center">
+                                    <h6 class="text-muted">槺榔里</h6>
+                                    <small class="text-muted">評估中</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Statistics -->
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="mb-0">📊 統計資訊</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number">1</div>
+                                <p class="text-muted">已完成里別</p>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">3</div>
+                                <p class="text-muted">訪問分組</p>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">2</div>
+                                <p class="text-muted">地圖模式</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- District Info -->
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h4 class="mb-0">🌍 區域概況</h4>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="text-primary">七股區特色</h6>
+                        <p class="small text-muted mb-3">
+                            七股區位於台南市西南沿海，以鹽業文化和濕地生態聞名。
+                            本次丹娜絲颱風對沿海地區造成較大影響。
+                        </p>
+                        
+                        <h6 class="text-primary">災後關懷重點</h6>
+                        <ul class="small text-muted">
+                            <li>沿海地區淹水受災戶</li>
+                            <li>老人獨居戶安全確認</li>
+                            <li>農業損失評估協助</li>
+                            <li>基礎設施修復需求</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-5">
+            <p style="color: rgba(255,255,255,0.7);">
+                <small>
+                    七股區災後安心家訪專案 | 
+                    <a href="https://github.com/pichiu/relief-visit-map" style="color: rgba(255,255,255,0.9);" target="_blank">
+                        GitHub Repository
+                    </a>
+                </small>
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

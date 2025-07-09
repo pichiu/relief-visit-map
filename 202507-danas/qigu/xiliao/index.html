@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西寮里 - 七股區災後安心家訪地圖</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { 
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .main-container {
+            padding: 3rem 0;
+        }
+        .hero-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            padding: 3rem;
+            margin-bottom: 2rem;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        .card-header {
+            border-radius: 15px 15px 0 0 !important;
+            padding: 1.5rem;
+            color: white;
+        }
+        .card-header.ordered {
+            background: linear-gradient(45deg, #28a745, #20c997);
+        }
+        .card-header.filter {
+            background: linear-gradient(45deg, #fd7e14, #ffc107);
+        }
+        .card-header.overview {
+            background: linear-gradient(45deg, #6f42c1, #e83e8c);
+        }
+        .btn-map {
+            border: none;
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-ordered {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+        }
+        .btn-ordered:hover {
+            background: linear-gradient(45deg, #20c997, #17a2b8);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40,167,69,0.3);
+        }
+        .btn-filter {
+            background: linear-gradient(45deg, #fd7e14, #ffc107);
+            color: white;
+        }
+        .btn-filter:hover {
+            background: linear-gradient(45deg, #ffc107, #e0a800);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(253,126,20,0.3);
+        }
+        .btn-overview {
+            background: linear-gradient(45deg, #6f42c1, #e83e8c);
+            color: white;
+        }
+        .btn-overview:hover {
+            background: linear-gradient(45deg, #e83e8c, #dc3545);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(111,66,193,0.3);
+        }
+        .btn-back {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            padding: 0.5rem 1.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-back:hover {
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            text-decoration: none;
+        }
+        .mode-description {
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .group-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .group-link {
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+        .group-link:hover {
+            border-color: #007bff;
+            background: white;
+            color: #007bff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .stats-section {
+            background: linear-gradient(45deg, rgba(255,255,255,0.9), rgba(248,249,250,0.9));
+            border-radius: 15px;
+            padding: 2rem;
+        }
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container main-container">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <a href="../" class="btn-back">← 返回七股區</a>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="hero-section text-center">
+            <h1 class="display-5 mb-4">🏘️ 西寮里</h1>
+            <p class="lead mb-4">Xiliao Village - 災後安心家訪地圖</p>
+            <p class="text-muted">提供多種地圖模式，協助志工進行有效率的關懷訪問</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Overview Maps -->
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header overview">
+                        <h3 class="mb-0">🌍 全區概覽地圖</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="mode-description">
+                            <h5 class="text-primary mb-3">📋 概覽模式說明</h5>
+                            <p class="mb-3">顯示西寮里全區的完整家訪點位分布，適合：</p>
+                            <ul class="list-unstyled">
+                                <li>• 總體規劃和資源配置</li>
+                                <li>• 了解全里受災分布狀況</li>
+                                <li>• 協調不同訪問小組</li>
+                                <li>• 整體進度掌控</li>
+                            </ul>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <a href="ordered/overview.html" class="btn-map btn-ordered w-100">
+                                    🗺️ Ordered 全區概覽
+                                </a>
+                            </div>
+                            <div class="col-sm-6">
+                                <a href="filter/overview.html" class="btn-map btn-filter w-100">
+                                    📊 Filter 全區概覽
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ordered Mode -->
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header ordered">
+                        <h3 class="mb-0">🗺️ Ordered 訪問模式</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="mode-description">
+                            <h5 class="text-success mb-3">✨ 模式特色</h5>
+                            <p class="mb-3">提供優化的訪問路徑規劃，適合實際執行家訪任務。</p>
+                        </div>
+                        <div class="group-grid">
+                            <a href="ordered/group-01.html" class="group-link">
+                                <div class="h5 mb-2">第 1 組</div>
+                                <small class="text-muted">Group 01</small>
+                            </a>
+                            <a href="ordered/group-02.html" class="group-link">
+                                <div class="h5 mb-2">第 2 組</div>
+                                <small class="text-muted">Group 02</small>
+                            </a>
+                            <a href="ordered/group-03.html" class="group-link">
+                                <div class="h5 mb-2">第 3 組</div>
+                                <small class="text-muted">Group 03</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Mode -->
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header filter">
+                        <h3 class="mb-0">📊 Filter 分組模式</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="mode-description">
+                            <h5 class="text-warning mb-3">🎯 模式特色</h5>
+                            <p class="mb-3">基於地理位置進行分組，方便不同訪問策略應用。</p>
+                        </div>
+                        <div class="group-grid">
+                            <a href="filter/group-01.html" class="group-link">
+                                <div class="h5 mb-2">第 1 組</div>
+                                <small class="text-muted">Group 01</small>
+                            </a>
+                            <a href="filter/group-02.html" class="group-link">
+                                <div class="h5 mb-2">第 2 組</div>
+                                <small class="text-muted">Group 02</small>
+                            </a>
+                            <a href="filter/group-03.html" class="group-link">
+                                <div class="h5 mb-2">第 3 組</div>
+                                <small class="text-muted">Group 03</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics -->
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header" style="background: linear-gradient(45deg, #17a2b8, #138496); color: white;">
+                        <h4 class="mb-0">📊 統計資訊</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="stats-section">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <div class="stat-number">2</div>
+                                        <p class="text-muted small">地圖模式</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <div class="stat-number">3</div>
+                                        <p class="text-muted small">訪問分組</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <div class="stat-number">6</div>
+                                        <p class="text-muted small">地圖總數</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h6 class="text-info">🎯 使用建議</h6>
+                            <ul class="small text-muted mb-0">
+                                <li><strong>Ordered 模式:</strong> 適合按順序進行系統性訪問</li>
+                                <li><strong>Filter 模式:</strong> 適合彈性調整訪問策略</li>
+                                <li><strong>全區概覽:</strong> 適合整體規劃和進度掌控</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Usage Instructions -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header" style="background: linear-gradient(45deg, #6c757d, #495057); color: white;">
+                        <h4 class="mb-0">📖 使用說明</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h6 class="text-primary">🗺️ 地圖功能</h6>
+                                <ul class="small">
+                                    <li>點擊標記查看詳細地址</li>
+                                    <li>拖拽地圖移動視角</li>
+                                    <li>滾輪縮放調整比例</li>
+                                    <li>支援行動裝置觸控操作</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <h6 class="text-success">👥 訪問建議</h6>
+                                <ul class="small">
+                                    <li>建議2-3人一組進行訪問</li>
+                                    <li>攜帶必要的關懷物資</li>
+                                    <li>注意獨居長者安全狀況</li>
+                                    <li>記錄訪問結果和需求</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <h6 class="text-warning">⚠️ 注意事項</h6>
+                                <ul class="small">
+                                    <li>確認住戶身份再進行訪問</li>
+                                    <li>尊重住戶隱私和意願</li>
+                                    <li>如遇緊急狀況立即通報</li>
+                                    <li>保持與指揮中心的聯繫</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-5">
+            <p style="color: rgba(255,255,255,0.7);">
+                <small>
+                    西寮里災後安心家訪專案 | 更新時間: 2025-07-09 | 
+                    <a href="https://github.com/pichiu/relief-visit-map" style="color: rgba(255,255,255,0.9);" target="_blank">
+                        GitHub Repository
+                    </a>
+                </small>
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
