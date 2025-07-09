@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a06ebd4be4061fa543fbf58547bdffd4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-textpath@1.2.3/leaflet.textpath.min.js"></script>
+</head>
+<body>
+    
+    
+        <h3 align="center" style="font-size:18px">
+            <b>七股區西寮里-01 詳細路線</b><br>
+            <span style="font-size:14px">
+                37 個地址 | 
+                預估距離: 732m | 
+                預估時間: 119 分鐘
+            </span>
+        </h3>
+        
+    
+        <div style="
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 200px;
+            background: white;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            z-index: 9999;
+        ">
+            <h4 style="margin: 0 0 10px 0;">分組統計</h4>
+            <p><strong>地址數量:</strong> 37 個</p>
+            <p><strong>預估距離:</strong> 732 公尺</p>
+            <p><strong>預估時間:</strong> 119 分鐘</p>
+            <p><strong>鄰別分布:</strong></p>
+            <ul style="margin: 5px 0; padding-left: 20px;">
+        <li>1鄰: 24個</li><li>2鄰: 13個</li>
+            </ul>
+        </div>
+        
+    
+            <div class="folium-map" id="map_a06ebd4be4061fa543fbf58547bdffd4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a06ebd4be4061fa543fbf58547bdffd4 = L.map(
+                "map_a06ebd4be4061fa543fbf58547bdffd4",
+                {
+                    center: [23.17065383783784, 120.09642591891891],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 16,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e908a05e6b1c40299251e3e5f8c56af9 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e908a05e6b1c40299251e3e5f8c56af9.addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var marker_f263feb1342886215a0b89718decfd4c = L.marker(
+                [23.1691, 120.097141],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_bd60fa6ee1b3c9f2504d7aa73d443fdb = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e1\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_d87d67efd9e5513bfd076bf83ad5ae52 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d9336e0fd4a4c117979a7c645017885b = $(`<div id="html_d9336e0fd4a4c117979a7c645017885b" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 1</h4>                 <p><strong>地址:</strong> 西寮1號之2</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.169100, 120.097141</p>             </div>             </div>`)[0];
+                popup_d87d67efd9e5513bfd076bf83ad5ae52.setContent(html_d9336e0fd4a4c117979a7c645017885b);
+            
+        
+
+        marker_f263feb1342886215a0b89718decfd4c.bindPopup(popup_d87d67efd9e5513bfd076bf83ad5ae52)
+        ;
+
+        
+    
+    
+            marker_f263feb1342886215a0b89718decfd4c.bindTooltip(
+                `<div>
+                     1. 西寮1號之2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f263feb1342886215a0b89718decfd4c.setIcon(div_icon_bd60fa6ee1b3c9f2504d7aa73d443fdb);
+            
+    
+            var marker_b3b85bff0345179433c1cd949aedba0d = L.marker(
+                [23.169737, 120.096955],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_f0335f654d9271f7b982d5d8814fd52d = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e2\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_03448c8f7da706b9411c1fd7d345820e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_cb5e9a1cff09a78d4358a2e60ff56ffe = $(`<div id="html_cb5e9a1cff09a78d4358a2e60ff56ffe" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 2</h4>                 <p><strong>地址:</strong> 西寮1號</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.169737, 120.096955</p>             </div>             </div>`)[0];
+                popup_03448c8f7da706b9411c1fd7d345820e.setContent(html_cb5e9a1cff09a78d4358a2e60ff56ffe);
+            
+        
+
+        marker_b3b85bff0345179433c1cd949aedba0d.bindPopup(popup_03448c8f7da706b9411c1fd7d345820e)
+        ;
+
+        
+    
+    
+            marker_b3b85bff0345179433c1cd949aedba0d.bindTooltip(
+                `<div>
+                     2. 西寮1號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b3b85bff0345179433c1cd949aedba0d.setIcon(div_icon_f0335f654d9271f7b982d5d8814fd52d);
+            
+    
+            var marker_f934435b6fdf0f738b26974283f2ef11 = L.marker(
+                [23.169889, 120.096909],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_1cf48d140de6259666c29f0af6080d2f = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e3\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_88e251961844488813ae27b2b8bc4cd0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6aff18de1b23d1573161d7530c8a9b11 = $(`<div id="html_6aff18de1b23d1573161d7530c8a9b11" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 3</h4>                 <p><strong>地址:</strong> 西寮1號之1</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.169889, 120.096909</p>             </div>             </div>`)[0];
+                popup_88e251961844488813ae27b2b8bc4cd0.setContent(html_6aff18de1b23d1573161d7530c8a9b11);
+            
+        
+
+        marker_f934435b6fdf0f738b26974283f2ef11.bindPopup(popup_88e251961844488813ae27b2b8bc4cd0)
+        ;
+
+        
+    
+    
+            marker_f934435b6fdf0f738b26974283f2ef11.bindTooltip(
+                `<div>
+                     3. 西寮1號之1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f934435b6fdf0f738b26974283f2ef11.setIcon(div_icon_1cf48d140de6259666c29f0af6080d2f);
+            
+    
+            var marker_4af22decdac148e4a0d90dc2c945c964 = L.marker(
+                [23.169929, 120.096739],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_d937338aeec3ae774d309b8c0fe5325b = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e4\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_4f2d8532b62c320ea386ad67c22996ea = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1cd3e6f963f0f5d4133f7583b07459e4 = $(`<div id="html_1cd3e6f963f0f5d4133f7583b07459e4" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 4</h4>                 <p><strong>地址:</strong> 西寮2號</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.169929, 120.096739</p>             </div>             </div>`)[0];
+                popup_4f2d8532b62c320ea386ad67c22996ea.setContent(html_1cd3e6f963f0f5d4133f7583b07459e4);
+            
+        
+
+        marker_4af22decdac148e4a0d90dc2c945c964.bindPopup(popup_4f2d8532b62c320ea386ad67c22996ea)
+        ;
+
+        
+    
+    
+            marker_4af22decdac148e4a0d90dc2c945c964.bindTooltip(
+                `<div>
+                     4. 西寮2號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4af22decdac148e4a0d90dc2c945c964.setIcon(div_icon_d937338aeec3ae774d309b8c0fe5325b);
+            
+    
+            var marker_f25b273429ecc5eda186b7674bad500e = L.marker(
+                [23.170052, 120.096616],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_aa0a1262c0440ada7645acebcd415efe = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e5\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_b354aa654704b945b73cda8dc3d7d931 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ac334b6f9c58c01fd726c8cd9d84f708 = $(`<div id="html_ac334b6f9c58c01fd726c8cd9d84f708" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 5</h4>                 <p><strong>地址:</strong> 西寮3號</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.170052, 120.096616</p>             </div>             </div>`)[0];
+                popup_b354aa654704b945b73cda8dc3d7d931.setContent(html_ac334b6f9c58c01fd726c8cd9d84f708);
+            
+        
+
+        marker_f25b273429ecc5eda186b7674bad500e.bindPopup(popup_b354aa654704b945b73cda8dc3d7d931)
+        ;
+
+        
+    
+    
+            marker_f25b273429ecc5eda186b7674bad500e.bindTooltip(
+                `<div>
+                     5. 西寮3號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f25b273429ecc5eda186b7674bad500e.setIcon(div_icon_aa0a1262c0440ada7645acebcd415efe);
+            
+    
+            var marker_e352ecc233c78b2cba0aa505eae32691 = L.marker(
+                [23.170159, 120.096606],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_7c6e239314769205a711265840e373f4 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e6\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_542dedf54aafc526ceb9bee953116c1d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9abc8fadfe55779716509836012b2c71 = $(`<div id="html_9abc8fadfe55779716509836012b2c71" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 6</h4>                 <p><strong>地址:</strong> 西寮4號</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.170159, 120.096606</p>             </div>             </div>`)[0];
+                popup_542dedf54aafc526ceb9bee953116c1d.setContent(html_9abc8fadfe55779716509836012b2c71);
+            
+        
+
+        marker_e352ecc233c78b2cba0aa505eae32691.bindPopup(popup_542dedf54aafc526ceb9bee953116c1d)
+        ;
+
+        
+    
+    
+            marker_e352ecc233c78b2cba0aa505eae32691.bindTooltip(
+                `<div>
+                     6. 西寮4號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e352ecc233c78b2cba0aa505eae32691.setIcon(div_icon_7c6e239314769205a711265840e373f4);
+            
+    
+            var marker_8df4a8c2a84e786e2d67d71abebfaaef = L.marker(
+                [23.17024, 120.096527],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_9a7e639f0c1a6527a135bd99a2839ab9 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e7\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_f236bffab5e373310440f0d569d2cf9b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2e5d8bbafb1a0436473ea2ec9943fc48 = $(`<div id="html_2e5d8bbafb1a0436473ea2ec9943fc48" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 7</h4>                 <p><strong>地址:</strong> 西寮5號</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.170240, 120.096527</p>             </div>             </div>`)[0];
+                popup_f236bffab5e373310440f0d569d2cf9b.setContent(html_2e5d8bbafb1a0436473ea2ec9943fc48);
+            
+        
+
+        marker_8df4a8c2a84e786e2d67d71abebfaaef.bindPopup(popup_f236bffab5e373310440f0d569d2cf9b)
+        ;
+
+        
+    
+    
+            marker_8df4a8c2a84e786e2d67d71abebfaaef.bindTooltip(
+                `<div>
+                     7. 西寮5號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8df4a8c2a84e786e2d67d71abebfaaef.setIcon(div_icon_9a7e639f0c1a6527a135bd99a2839ab9);
+            
+    
+            var marker_90f2bc7a2ec8316c7f6a3e105b98c608 = L.marker(
+                [23.170304, 120.096457],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_c5b68c9d203498b8c2e4b8f27ecca413 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e8\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_19b55224b078bc6f7826243de7832dd8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9e1d2270a4a462790ddbb0087398d60d = $(`<div id="html_9e1d2270a4a462790ddbb0087398d60d" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 8</h4>                 <p><strong>地址:</strong> 西寮6號</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.170304, 120.096457</p>             </div>             </div>`)[0];
+                popup_19b55224b078bc6f7826243de7832dd8.setContent(html_9e1d2270a4a462790ddbb0087398d60d);
+            
+        
+
+        marker_90f2bc7a2ec8316c7f6a3e105b98c608.bindPopup(popup_19b55224b078bc6f7826243de7832dd8)
+        ;
+
+        
+    
+    
+            marker_90f2bc7a2ec8316c7f6a3e105b98c608.bindTooltip(
+                `<div>
+                     8. 西寮6號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_90f2bc7a2ec8316c7f6a3e105b98c608.setIcon(div_icon_c5b68c9d203498b8c2e4b8f27ecca413);
+            
+    
+            var marker_a1296d6a3869b8b5ff280708e2c32160 = L.marker(
+                [23.170447, 120.096477],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_0927a4888f97d6a59795f9e26cdf5f55 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e9\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_c99b53fabf79b65237f834923d885db8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1bb423ca195227988da79936d3dec321 = $(`<div id="html_1bb423ca195227988da79936d3dec321" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 9</h4>                 <p><strong>地址:</strong> 西寮7號</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.170447, 120.096477</p>             </div>             </div>`)[0];
+                popup_c99b53fabf79b65237f834923d885db8.setContent(html_1bb423ca195227988da79936d3dec321);
+            
+        
+
+        marker_a1296d6a3869b8b5ff280708e2c32160.bindPopup(popup_c99b53fabf79b65237f834923d885db8)
+        ;
+
+        
+    
+    
+            marker_a1296d6a3869b8b5ff280708e2c32160.bindTooltip(
+                `<div>
+                     9. 西寮7號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a1296d6a3869b8b5ff280708e2c32160.setIcon(div_icon_0927a4888f97d6a59795f9e26cdf5f55);
+            
+    
+            var marker_811f55f07c6036ab79408125bfb3fa40 = L.marker(
+                [23.170542, 120.09638],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_5e4489d0c99bac74c024c03d97441fa6 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e10\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_57195c7c939866ab74867a585b5c66c0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f3c8d525db1bd56d98f9a0a8e7db151d = $(`<div id="html_f3c8d525db1bd56d98f9a0a8e7db151d" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 10</h4>                 <p><strong>地址:</strong> 西寮9號</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.170542, 120.096380</p>             </div>             </div>`)[0];
+                popup_57195c7c939866ab74867a585b5c66c0.setContent(html_f3c8d525db1bd56d98f9a0a8e7db151d);
+            
+        
+
+        marker_811f55f07c6036ab79408125bfb3fa40.bindPopup(popup_57195c7c939866ab74867a585b5c66c0)
+        ;
+
+        
+    
+    
+            marker_811f55f07c6036ab79408125bfb3fa40.bindTooltip(
+                `<div>
+                     10. 西寮9號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_811f55f07c6036ab79408125bfb3fa40.setIcon(div_icon_5e4489d0c99bac74c024c03d97441fa6);
+            
+    
+            var marker_36fee564ba9f05721629793a7909d27b = L.marker(
+                [23.170573, 120.096355],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_ea727ca51380276a8cd489a1ab37608d = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e11\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_aa9dbc35da475e99e15b80985ec6ef87 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_51d28eb9f810bf8ded246a9600e19c6e = $(`<div id="html_51d28eb9f810bf8ded246a9600e19c6e" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 11</h4>                 <p><strong>地址:</strong> 西寮9號之1</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.170573, 120.096355</p>             </div>             </div>`)[0];
+                popup_aa9dbc35da475e99e15b80985ec6ef87.setContent(html_51d28eb9f810bf8ded246a9600e19c6e);
+            
+        
+
+        marker_36fee564ba9f05721629793a7909d27b.bindPopup(popup_aa9dbc35da475e99e15b80985ec6ef87)
+        ;
+
+        
+    
+    
+            marker_36fee564ba9f05721629793a7909d27b.bindTooltip(
+                `<div>
+                     11. 西寮9號之1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_36fee564ba9f05721629793a7909d27b.setIcon(div_icon_ea727ca51380276a8cd489a1ab37608d);
+            
+    
+            var marker_f363e485a9e8d9f8553ec1356593c92c = L.marker(
+                [23.170566, 120.096233],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_6012d9cea64280469e201faf9d165828 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e12\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_a5fdc10ab52b4e8ff1fd4b5b2ed1e269 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_57af622700ab2f57bd2fe1f5c33fe467 = $(`<div id="html_57af622700ab2f57bd2fe1f5c33fe467" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 12</h4>                 <p><strong>地址:</strong> 西寮8號</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.170566, 120.096233</p>             </div>             </div>`)[0];
+                popup_a5fdc10ab52b4e8ff1fd4b5b2ed1e269.setContent(html_57af622700ab2f57bd2fe1f5c33fe467);
+            
+        
+
+        marker_f363e485a9e8d9f8553ec1356593c92c.bindPopup(popup_a5fdc10ab52b4e8ff1fd4b5b2ed1e269)
+        ;
+
+        
+    
+    
+            marker_f363e485a9e8d9f8553ec1356593c92c.bindTooltip(
+                `<div>
+                     12. 西寮8號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f363e485a9e8d9f8553ec1356593c92c.setIcon(div_icon_6012d9cea64280469e201faf9d165828);
+            
+    
+            var marker_520bbc3331f644c983616e0c6cc2acf4 = L.marker(
+                [23.170671, 120.096204],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_25c8989606f33cda10970029deac80b5 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e13\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_77d9290be34e498aaa54bfb1aeddc8bc = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c978bf464e7798aeb898d87a393f59c0 = $(`<div id="html_c978bf464e7798aeb898d87a393f59c0" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 13</h4>                 <p><strong>地址:</strong> 西寮10號</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.170671, 120.096204</p>             </div>             </div>`)[0];
+                popup_77d9290be34e498aaa54bfb1aeddc8bc.setContent(html_c978bf464e7798aeb898d87a393f59c0);
+            
+        
+
+        marker_520bbc3331f644c983616e0c6cc2acf4.bindPopup(popup_77d9290be34e498aaa54bfb1aeddc8bc)
+        ;
+
+        
+    
+    
+            marker_520bbc3331f644c983616e0c6cc2acf4.bindTooltip(
+                `<div>
+                     13. 西寮10號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_520bbc3331f644c983616e0c6cc2acf4.setIcon(div_icon_25c8989606f33cda10970029deac80b5);
+            
+    
+            var marker_ba5ea776ef6f86e98ebf09d3121598d0 = L.marker(
+                [23.170797, 120.096176],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_9883c693a2249a50e3f63694466d87f5 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e14\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_4997b89715731775abdc797798c4bfda = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b815ab069a5718380992072f11ba8800 = $(`<div id="html_b815ab069a5718380992072f11ba8800" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 14</h4>                 <p><strong>地址:</strong> 西寮12號</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.170797, 120.096176</p>             </div>             </div>`)[0];
+                popup_4997b89715731775abdc797798c4bfda.setContent(html_b815ab069a5718380992072f11ba8800);
+            
+        
+
+        marker_ba5ea776ef6f86e98ebf09d3121598d0.bindPopup(popup_4997b89715731775abdc797798c4bfda)
+        ;
+
+        
+    
+    
+            marker_ba5ea776ef6f86e98ebf09d3121598d0.bindTooltip(
+                `<div>
+                     14. 西寮12號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ba5ea776ef6f86e98ebf09d3121598d0.setIcon(div_icon_9883c693a2249a50e3f63694466d87f5);
+            
+    
+            var marker_df4ceab82f9e21e7392165f17c42651c = L.marker(
+                [23.170902, 120.096098],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_1d5a1f4095c0fac39ffe0873e126b38a = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e15\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_e3ac78c497da631d135410b4886a9fa9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8ee67ded69d3e8e0b20fd68b183d3120 = $(`<div id="html_8ee67ded69d3e8e0b20fd68b183d3120" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 15</h4>                 <p><strong>地址:</strong> 西寮13號</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.170902, 120.096098</p>             </div>             </div>`)[0];
+                popup_e3ac78c497da631d135410b4886a9fa9.setContent(html_8ee67ded69d3e8e0b20fd68b183d3120);
+            
+        
+
+        marker_df4ceab82f9e21e7392165f17c42651c.bindPopup(popup_e3ac78c497da631d135410b4886a9fa9)
+        ;
+
+        
+    
+    
+            marker_df4ceab82f9e21e7392165f17c42651c.bindTooltip(
+                `<div>
+                     15. 西寮13號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_df4ceab82f9e21e7392165f17c42651c.setIcon(div_icon_1d5a1f4095c0fac39ffe0873e126b38a);
+            
+    
+            var marker_bde7131dcb43f63dd7325fd5fa2bda6d = L.marker(
+                [23.170974, 120.096048],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_5fe0022b0d3d84529d683f2eaaf190d5 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e16\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_ebf651a119524caba7733c6333ec2d13 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3654736c3568e7a34f7e8d08a9a5e3fb = $(`<div id="html_3654736c3568e7a34f7e8d08a9a5e3fb" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 16</h4>                 <p><strong>地址:</strong> 西寮13號之1</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.170974, 120.096048</p>             </div>             </div>`)[0];
+                popup_ebf651a119524caba7733c6333ec2d13.setContent(html_3654736c3568e7a34f7e8d08a9a5e3fb);
+            
+        
+
+        marker_bde7131dcb43f63dd7325fd5fa2bda6d.bindPopup(popup_ebf651a119524caba7733c6333ec2d13)
+        ;
+
+        
+    
+    
+            marker_bde7131dcb43f63dd7325fd5fa2bda6d.bindTooltip(
+                `<div>
+                     16. 西寮13號之1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bde7131dcb43f63dd7325fd5fa2bda6d.setIcon(div_icon_5fe0022b0d3d84529d683f2eaaf190d5);
+            
+    
+            var marker_df4ddbbb7f28a052710727c70c3ed688 = L.marker(
+                [23.171105, 120.096029],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_a616eb923d40502e8b25e9089c117db4 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e17\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_106091ff87322c8bc6ea63b8cc57cb80 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_705aaa9e66a218cd1a9acd02314b6b92 = $(`<div id="html_705aaa9e66a218cd1a9acd02314b6b92" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 17</h4>                 <p><strong>地址:</strong> 西寮16號</p>                 <p><strong>鄰別:</strong> 2鄰</p>                 <p><strong>座標:</strong> 23.171105, 120.096029</p>             </div>             </div>`)[0];
+                popup_106091ff87322c8bc6ea63b8cc57cb80.setContent(html_705aaa9e66a218cd1a9acd02314b6b92);
+            
+        
+
+        marker_df4ddbbb7f28a052710727c70c3ed688.bindPopup(popup_106091ff87322c8bc6ea63b8cc57cb80)
+        ;
+
+        
+    
+    
+            marker_df4ddbbb7f28a052710727c70c3ed688.bindTooltip(
+                `<div>
+                     17. 西寮16號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_df4ddbbb7f28a052710727c70c3ed688.setIcon(div_icon_a616eb923d40502e8b25e9089c117db4);
+            
+    
+            var marker_6b0cfd58dfa0cd144f7ba069875e745d = L.marker(
+                [23.171205, 120.095988],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_b5a4f72c77a75b9bd6e05c43bc935b62 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e18\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_0a536641c40aa2d04fa4542ae4f74dfe = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_770fad89daa703f7ff5774e634ff120f = $(`<div id="html_770fad89daa703f7ff5774e634ff120f" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 18</h4>                 <p><strong>地址:</strong> 西寮17號</p>                 <p><strong>鄰別:</strong> 2鄰</p>                 <p><strong>座標:</strong> 23.171205, 120.095988</p>             </div>             </div>`)[0];
+                popup_0a536641c40aa2d04fa4542ae4f74dfe.setContent(html_770fad89daa703f7ff5774e634ff120f);
+            
+        
+
+        marker_6b0cfd58dfa0cd144f7ba069875e745d.bindPopup(popup_0a536641c40aa2d04fa4542ae4f74dfe)
+        ;
+
+        
+    
+    
+            marker_6b0cfd58dfa0cd144f7ba069875e745d.bindTooltip(
+                `<div>
+                     18. 西寮17號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6b0cfd58dfa0cd144f7ba069875e745d.setIcon(div_icon_b5a4f72c77a75b9bd6e05c43bc935b62);
+            
+    
+            var marker_11449158a6da73efd5ba24fb3c948e19 = L.marker(
+                [23.171304, 120.095964],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_43e6949806b0384ff4d12b38ea873036 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e19\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_7103ed2de97af5719c546a37813b3997 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fc0140af0714274b8366e79d29f96fb5 = $(`<div id="html_fc0140af0714274b8366e79d29f96fb5" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 19</h4>                 <p><strong>地址:</strong> 西寮21號</p>                 <p><strong>鄰別:</strong> 2鄰</p>                 <p><strong>座標:</strong> 23.171304, 120.095964</p>             </div>             </div>`)[0];
+                popup_7103ed2de97af5719c546a37813b3997.setContent(html_fc0140af0714274b8366e79d29f96fb5);
+            
+        
+
+        marker_11449158a6da73efd5ba24fb3c948e19.bindPopup(popup_7103ed2de97af5719c546a37813b3997)
+        ;
+
+        
+    
+    
+            marker_11449158a6da73efd5ba24fb3c948e19.bindTooltip(
+                `<div>
+                     19. 西寮21號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_11449158a6da73efd5ba24fb3c948e19.setIcon(div_icon_43e6949806b0384ff4d12b38ea873036);
+            
+    
+            var marker_00076af596ca09dd578c0497ea768a9c = L.marker(
+                [23.171376, 120.096131],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_79985783c93387639eba0639a42c8dee = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e20\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_df3423b9e658f13694e5bbe720b89146 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2513102fa589f4c5ceb709085e92a5e3 = $(`<div id="html_2513102fa589f4c5ceb709085e92a5e3" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 20</h4>                 <p><strong>地址:</strong> 西寮22號</p>                 <p><strong>鄰別:</strong> 2鄰</p>                 <p><strong>座標:</strong> 23.171376, 120.096131</p>             </div>             </div>`)[0];
+                popup_df3423b9e658f13694e5bbe720b89146.setContent(html_2513102fa589f4c5ceb709085e92a5e3);
+            
+        
+
+        marker_00076af596ca09dd578c0497ea768a9c.bindPopup(popup_df3423b9e658f13694e5bbe720b89146)
+        ;
+
+        
+    
+    
+            marker_00076af596ca09dd578c0497ea768a9c.bindTooltip(
+                `<div>
+                     20. 西寮22號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_00076af596ca09dd578c0497ea768a9c.setIcon(div_icon_79985783c93387639eba0639a42c8dee);
+            
+    
+            var marker_8af527189bd2ab32c62afe5d7f2740e9 = L.marker(
+                [23.171444, 120.096239],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_6efd7eeadcc37bd9f4d662168fe9b9c5 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e21\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_55cde741ff0a8e3193f30fa3b074e972 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a4964e966d1777731dd023e21e59fc08 = $(`<div id="html_a4964e966d1777731dd023e21e59fc08" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 21</h4>                 <p><strong>地址:</strong> 西寮23號</p>                 <p><strong>鄰別:</strong> 2鄰</p>                 <p><strong>座標:</strong> 23.171444, 120.096239</p>             </div>             </div>`)[0];
+                popup_55cde741ff0a8e3193f30fa3b074e972.setContent(html_a4964e966d1777731dd023e21e59fc08);
+            
+        
+
+        marker_8af527189bd2ab32c62afe5d7f2740e9.bindPopup(popup_55cde741ff0a8e3193f30fa3b074e972)
+        ;
+
+        
+    
+    
+            marker_8af527189bd2ab32c62afe5d7f2740e9.bindTooltip(
+                `<div>
+                     21. 西寮23號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8af527189bd2ab32c62afe5d7f2740e9.setIcon(div_icon_6efd7eeadcc37bd9f4d662168fe9b9c5);
+            
+    
+            var marker_259f24b6434a9cd61e3a6dda0dbb94e0 = L.marker(
+                [23.171284, 120.096318],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_230d442b6d8a3b63b9694bae887063df = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e22\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_764e6c58f59cf5b8f5bd25acfdc18527 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b9beca92aca57826e6a7a915e7daa48f = $(`<div id="html_b9beca92aca57826e6a7a915e7daa48f" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 22</h4>                 <p><strong>地址:</strong> 西寮20號</p>                 <p><strong>鄰別:</strong> 2鄰</p>                 <p><strong>座標:</strong> 23.171284, 120.096318</p>             </div>             </div>`)[0];
+                popup_764e6c58f59cf5b8f5bd25acfdc18527.setContent(html_b9beca92aca57826e6a7a915e7daa48f);
+            
+        
+
+        marker_259f24b6434a9cd61e3a6dda0dbb94e0.bindPopup(popup_764e6c58f59cf5b8f5bd25acfdc18527)
+        ;
+
+        
+    
+    
+            marker_259f24b6434a9cd61e3a6dda0dbb94e0.bindTooltip(
+                `<div>
+                     22. 西寮20號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_259f24b6434a9cd61e3a6dda0dbb94e0.setIcon(div_icon_230d442b6d8a3b63b9694bae887063df);
+            
+    
+            var marker_44b02f65c3cc57cf51bb6eb6dbe0d7e1 = L.marker(
+                [23.171148, 120.096369],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_9b7d9de758857ed690ddd068f436f6c2 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e23\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_4813b75c0fc14717ff038954086233ba = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a2d30dc752cd39877098efdb452c5211 = $(`<div id="html_a2d30dc752cd39877098efdb452c5211" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 23</h4>                 <p><strong>地址:</strong> 西寮20號之1</p>                 <p><strong>鄰別:</strong> 2鄰</p>                 <p><strong>座標:</strong> 23.171148, 120.096369</p>             </div>             </div>`)[0];
+                popup_4813b75c0fc14717ff038954086233ba.setContent(html_a2d30dc752cd39877098efdb452c5211);
+            
+        
+
+        marker_44b02f65c3cc57cf51bb6eb6dbe0d7e1.bindPopup(popup_4813b75c0fc14717ff038954086233ba)
+        ;
+
+        
+    
+    
+            marker_44b02f65c3cc57cf51bb6eb6dbe0d7e1.bindTooltip(
+                `<div>
+                     23. 西寮20號之1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_44b02f65c3cc57cf51bb6eb6dbe0d7e1.setIcon(div_icon_9b7d9de758857ed690ddd068f436f6c2);
+            
+    
+            var marker_f72ff2b6362fd0c546e7c9c281c2238c = L.marker(
+                [23.171109, 120.096226],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_991ba2f762fb4afc9658b5e690a8cc2f = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e24\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_a6ccd88a346e9f2c02392a8c60ee841e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_20eeeb7385cd6508b6c570bb0c70e24c = $(`<div id="html_20eeeb7385cd6508b6c570bb0c70e24c" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 24</h4>                 <p><strong>地址:</strong> 西寮15號之1</p>                 <p><strong>鄰別:</strong> 2鄰</p>                 <p><strong>座標:</strong> 23.171109, 120.096226</p>             </div>             </div>`)[0];
+                popup_a6ccd88a346e9f2c02392a8c60ee841e.setContent(html_20eeeb7385cd6508b6c570bb0c70e24c);
+            
+        
+
+        marker_f72ff2b6362fd0c546e7c9c281c2238c.bindPopup(popup_a6ccd88a346e9f2c02392a8c60ee841e)
+        ;
+
+        
+    
+    
+            marker_f72ff2b6362fd0c546e7c9c281c2238c.bindTooltip(
+                `<div>
+                     24. 西寮15號之1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f72ff2b6362fd0c546e7c9c281c2238c.setIcon(div_icon_991ba2f762fb4afc9658b5e690a8cc2f);
+            
+    
+            var marker_a56f88ab9733e6ee2600e603a1ec474c = L.marker(
+                [23.171176, 120.096205],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_89e18eb55fb3d4a50d6a8f638012d426 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e25\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_2aa150fd2a5528a7e60ff09d7fddc429 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c7a2aef7e96ed31703fb60872d9cefaf = $(`<div id="html_c7a2aef7e96ed31703fb60872d9cefaf" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 25</h4>                 <p><strong>地址:</strong> 西寮18號</p>                 <p><strong>鄰別:</strong> 2鄰</p>                 <p><strong>座標:</strong> 23.171176, 120.096205</p>             </div>             </div>`)[0];
+                popup_2aa150fd2a5528a7e60ff09d7fddc429.setContent(html_c7a2aef7e96ed31703fb60872d9cefaf);
+            
+        
+
+        marker_a56f88ab9733e6ee2600e603a1ec474c.bindPopup(popup_2aa150fd2a5528a7e60ff09d7fddc429)
+        ;
+
+        
+    
+    
+            marker_a56f88ab9733e6ee2600e603a1ec474c.bindTooltip(
+                `<div>
+                     25. 西寮18號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a56f88ab9733e6ee2600e603a1ec474c.setIcon(div_icon_89e18eb55fb3d4a50d6a8f638012d426);
+            
+    
+            var marker_b7400634537790dd9d83722a2b9515f6 = L.marker(
+                [23.171233, 120.096161],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_687406d286db15e02e401c2b0a2122ad = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e26\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_123fbc53d1d577f94596ca68e90abb84 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c24714f45741d69377e7ab3c2eec8d84 = $(`<div id="html_c24714f45741d69377e7ab3c2eec8d84" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 26</h4>                 <p><strong>地址:</strong> 西寮19號</p>                 <p><strong>鄰別:</strong> 2鄰</p>                 <p><strong>座標:</strong> 23.171233, 120.096161</p>             </div>             </div>`)[0];
+                popup_123fbc53d1d577f94596ca68e90abb84.setContent(html_c24714f45741d69377e7ab3c2eec8d84);
+            
+        
+
+        marker_b7400634537790dd9d83722a2b9515f6.bindPopup(popup_123fbc53d1d577f94596ca68e90abb84)
+        ;
+
+        
+    
+    
+            marker_b7400634537790dd9d83722a2b9515f6.bindTooltip(
+                `<div>
+                     26. 西寮19號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b7400634537790dd9d83722a2b9515f6.setIcon(div_icon_687406d286db15e02e401c2b0a2122ad);
+            
+    
+            var marker_17f447aaa222a1a913c5e1b7b3fc50ee = L.marker(
+                [23.171033, 120.096196],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_cffc44ff016c9352ebf8e2b1e7d06d89 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e27\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_c01b1aaeed9a5620a397adb8129ed9d7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7d09d3d6ad7d9f2e7690fa5ce9d9c5bb = $(`<div id="html_7d09d3d6ad7d9f2e7690fa5ce9d9c5bb" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 27</h4>                 <p><strong>地址:</strong> 西寮15號</p>                 <p><strong>鄰別:</strong> 2鄰</p>                 <p><strong>座標:</strong> 23.171033, 120.096196</p>             </div>             </div>`)[0];
+                popup_c01b1aaeed9a5620a397adb8129ed9d7.setContent(html_7d09d3d6ad7d9f2e7690fa5ce9d9c5bb);
+            
+        
+
+        marker_17f447aaa222a1a913c5e1b7b3fc50ee.bindPopup(popup_c01b1aaeed9a5620a397adb8129ed9d7)
+        ;
+
+        
+    
+    
+            marker_17f447aaa222a1a913c5e1b7b3fc50ee.bindTooltip(
+                `<div>
+                     27. 西寮15號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_17f447aaa222a1a913c5e1b7b3fc50ee.setIcon(div_icon_cffc44ff016c9352ebf8e2b1e7d06d89);
+            
+    
+            var marker_7979fc8c8841bfbc3a45cc44fd7f2fce = L.marker(
+                [23.170988, 120.096263],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_67ac8c78bbfa0b032e64724d5de16fe3 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e28\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_ef190ae13f3d4f726aa16ba326e19f5e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_09835ce1c789c73e4fc9e4c00d3f945c = $(`<div id="html_09835ce1c789c73e4fc9e4c00d3f945c" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 28</h4>                 <p><strong>地址:</strong> 西寮14號</p>                 <p><strong>鄰別:</strong> 2鄰</p>                 <p><strong>座標:</strong> 23.170988, 120.096263</p>             </div>             </div>`)[0];
+                popup_ef190ae13f3d4f726aa16ba326e19f5e.setContent(html_09835ce1c789c73e4fc9e4c00d3f945c);
+            
+        
+
+        marker_7979fc8c8841bfbc3a45cc44fd7f2fce.bindPopup(popup_ef190ae13f3d4f726aa16ba326e19f5e)
+        ;
+
+        
+    
+    
+            marker_7979fc8c8841bfbc3a45cc44fd7f2fce.bindTooltip(
+                `<div>
+                     28. 西寮14號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7979fc8c8841bfbc3a45cc44fd7f2fce.setIcon(div_icon_67ac8c78bbfa0b032e64724d5de16fe3);
+            
+    
+            var marker_6941f2d3e32b95ef6eec88b8c0dd457b = L.marker(
+                [23.170831, 120.096362],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_d0c91851adfbc6a51af59bacc8fe0163 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e29\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_120b7b67425d89beb1bac170409b7804 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f6b65a3b3fb499cc0f38c06d89cb9e7f = $(`<div id="html_f6b65a3b3fb499cc0f38c06d89cb9e7f" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 29</h4>                 <p><strong>地址:</strong> 西寮12之1號</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.170831, 120.096362</p>             </div>             </div>`)[0];
+                popup_120b7b67425d89beb1bac170409b7804.setContent(html_f6b65a3b3fb499cc0f38c06d89cb9e7f);
+            
+        
+
+        marker_6941f2d3e32b95ef6eec88b8c0dd457b.bindPopup(popup_120b7b67425d89beb1bac170409b7804)
+        ;
+
+        
+    
+    
+            marker_6941f2d3e32b95ef6eec88b8c0dd457b.bindTooltip(
+                `<div>
+                     29. 西寮12之1號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6941f2d3e32b95ef6eec88b8c0dd457b.setIcon(div_icon_d0c91851adfbc6a51af59bacc8fe0163);
+            
+    
+            var marker_65e69a10438e4f77a1d74d9d8740cbcb = L.marker(
+                [23.170706, 120.09634],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_c242d1241151aa4fcba8316a9f9c5ee2 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e30\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_32e6c9e2a79f60f2aa5afba1da7b2fd3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_eb571ff3750b7cac84523d0cde417233 = $(`<div id="html_eb571ff3750b7cac84523d0cde417233" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 30</h4>                 <p><strong>地址:</strong> 西寮11號</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.170706, 120.096340</p>             </div>             </div>`)[0];
+                popup_32e6c9e2a79f60f2aa5afba1da7b2fd3.setContent(html_eb571ff3750b7cac84523d0cde417233);
+            
+        
+
+        marker_65e69a10438e4f77a1d74d9d8740cbcb.bindPopup(popup_32e6c9e2a79f60f2aa5afba1da7b2fd3)
+        ;
+
+        
+    
+    
+            marker_65e69a10438e4f77a1d74d9d8740cbcb.bindTooltip(
+                `<div>
+                     30. 西寮11號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_65e69a10438e4f77a1d74d9d8740cbcb.setIcon(div_icon_c242d1241151aa4fcba8316a9f9c5ee2);
+            
+    
+            var marker_7c025017ed864f4f34cc4b8136dcbe03 = L.marker(
+                [23.170515, 120.096641],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_eaf537ee6c4ab0555a2da035780d4f55 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e31\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_28816bbe698caafc8aab00863cf4270b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8f4e4a4709abdb55ba6220c47a37b792 = $(`<div id="html_8f4e4a4709abdb55ba6220c47a37b792" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 31</h4>                 <p><strong>地址:</strong> 西寮6號之1</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.170515, 120.096641</p>             </div>             </div>`)[0];
+                popup_28816bbe698caafc8aab00863cf4270b.setContent(html_8f4e4a4709abdb55ba6220c47a37b792);
+            
+        
+
+        marker_7c025017ed864f4f34cc4b8136dcbe03.bindPopup(popup_28816bbe698caafc8aab00863cf4270b)
+        ;
+
+        
+    
+    
+            marker_7c025017ed864f4f34cc4b8136dcbe03.bindTooltip(
+                `<div>
+                     31. 西寮6號之1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7c025017ed864f4f34cc4b8136dcbe03.setIcon(div_icon_eaf537ee6c4ab0555a2da035780d4f55);
+            
+    
+            var marker_416fd8bc69aa472164d154d0510d9c4d = L.marker(
+                [23.170319, 120.096703],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_c374503cb1121c54a188a1feecbb008f = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e32\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_5ed50a3301b92f9c19e0ef584730185f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_af06b60c9b0d679b88b4f95fceea0784 = $(`<div id="html_af06b60c9b0d679b88b4f95fceea0784" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 32</h4>                 <p><strong>地址:</strong> 西寮5號之1</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.170319, 120.096703</p>             </div>             </div>`)[0];
+                popup_5ed50a3301b92f9c19e0ef584730185f.setContent(html_af06b60c9b0d679b88b4f95fceea0784);
+            
+        
+
+        marker_416fd8bc69aa472164d154d0510d9c4d.bindPopup(popup_5ed50a3301b92f9c19e0ef584730185f)
+        ;
+
+        
+    
+    
+            marker_416fd8bc69aa472164d154d0510d9c4d.bindTooltip(
+                `<div>
+                     32. 西寮5號之1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_416fd8bc69aa472164d154d0510d9c4d.setIcon(div_icon_c374503cb1121c54a188a1feecbb008f);
+            
+    
+            var marker_ad29f31744aecef80fb436a70dae613f = L.marker(
+                [23.170252, 120.096734],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_dc82202756af6646d5e250602b39939e = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e33\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_42a203171ccab975c5aa559c5fb2e85b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b9e808c996c802ed7e6afc9c0e2bf3f1 = $(`<div id="html_b9e808c996c802ed7e6afc9c0e2bf3f1" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 33</h4>                 <p><strong>地址:</strong> 西寮1號之7</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.170252, 120.096734</p>             </div>             </div>`)[0];
+                popup_42a203171ccab975c5aa559c5fb2e85b.setContent(html_b9e808c996c802ed7e6afc9c0e2bf3f1);
+            
+        
+
+        marker_ad29f31744aecef80fb436a70dae613f.bindPopup(popup_42a203171ccab975c5aa559c5fb2e85b)
+        ;
+
+        
+    
+    
+            marker_ad29f31744aecef80fb436a70dae613f.bindTooltip(
+                `<div>
+                     33. 西寮1號之7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ad29f31744aecef80fb436a70dae613f.setIcon(div_icon_dc82202756af6646d5e250602b39939e);
+            
+    
+            var marker_b285b0f535cf8c4a73e0335e6693e07e = L.marker(
+                [23.170182, 120.096769],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_13b8b1c5bf9a88379e460a6cb1865ced = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e34\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_147219ee67975173c2bba869d31b3ee0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d89fc10dab66d19dd997622fe22c4f23 = $(`<div id="html_d89fc10dab66d19dd997622fe22c4f23" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 34</h4>                 <p><strong>地址:</strong> 西寮1號之6</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.170182, 120.096769</p>             </div>             </div>`)[0];
+                popup_147219ee67975173c2bba869d31b3ee0.setContent(html_d89fc10dab66d19dd997622fe22c4f23);
+            
+        
+
+        marker_b285b0f535cf8c4a73e0335e6693e07e.bindPopup(popup_147219ee67975173c2bba869d31b3ee0)
+        ;
+
+        
+    
+    
+            marker_b285b0f535cf8c4a73e0335e6693e07e.bindTooltip(
+                `<div>
+                     34. 西寮1號之6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b285b0f535cf8c4a73e0335e6693e07e.setIcon(div_icon_13b8b1c5bf9a88379e460a6cb1865ced);
+            
+    
+            var marker_105480d374b5a61c095616b849c57bc2 = L.marker(
+                [23.170096, 120.096826],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_052a278732643dd34e2c63213f8a4e9c = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e35\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_f8ddbdc4b556b2fb243d1825864d1273 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ea2e0579b71a7a41559a5ff7b81b5e5f = $(`<div id="html_ea2e0579b71a7a41559a5ff7b81b5e5f" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 35</h4>                 <p><strong>地址:</strong> 西寮1號之5</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.170096, 120.096826</p>             </div>             </div>`)[0];
+                popup_f8ddbdc4b556b2fb243d1825864d1273.setContent(html_ea2e0579b71a7a41559a5ff7b81b5e5f);
+            
+        
+
+        marker_105480d374b5a61c095616b849c57bc2.bindPopup(popup_f8ddbdc4b556b2fb243d1825864d1273)
+        ;
+
+        
+    
+    
+            marker_105480d374b5a61c095616b849c57bc2.bindTooltip(
+                `<div>
+                     35. 西寮1號之5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_105480d374b5a61c095616b849c57bc2.setIcon(div_icon_052a278732643dd34e2c63213f8a4e9c);
+            
+    
+            var marker_e2b29e14cf7f42631f2849d92c95c718 = L.marker(
+                [23.17042, 120.096993],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_9f8e4a7ecd51fb4d68d600a67ebcc887 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e36\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_20396f49a01ac5357610ea447e074b41 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_023c92c7dc06a704ca2c882b210c31fe = $(`<div id="html_023c92c7dc06a704ca2c882b210c31fe" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 36</h4>                 <p><strong>地址:</strong> 西寮1號之3</p>                 <p><strong>鄰別:</strong> 1鄰</p>                 <p><strong>座標:</strong> 23.170420, 120.096993</p>             </div>             </div>`)[0];
+                popup_20396f49a01ac5357610ea447e074b41.setContent(html_023c92c7dc06a704ca2c882b210c31fe);
+            
+        
+
+        marker_e2b29e14cf7f42631f2849d92c95c718.bindPopup(popup_20396f49a01ac5357610ea447e074b41)
+        ;
+
+        
+    
+    
+            marker_e2b29e14cf7f42631f2849d92c95c718.bindTooltip(
+                `<div>
+                     36. 西寮1號之3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e2b29e14cf7f42631f2849d92c95c718.setIcon(div_icon_9f8e4a7ecd51fb4d68d600a67ebcc887);
+            
+    
+            var marker_600d30ae1f7a847dea24e4a869407daf = L.marker(
+                [23.171584, 120.096381],
+                {
+}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            var div_icon_7ec62e1a806c3b09aca345f59376567d = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"\n                        background-color: #FF6B6B;\n                        border: 2px solid white;\n                        border-radius: 50%;\n                        width: 30px;\n                        height: 30px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        font-weight: bold;\n                        font-size: 14px;\n                        color: white;\n                        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);\n                    \"\u003e37\u003c/div\u003e\n                    ",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+        var popup_1d1ff65802d5006c6b7d08f376278b90 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_48fa9a435e87896ecf909720d335be54 = $(`<div id="html_48fa9a435e87896ecf909720d335be54" style="width: 100.0%; height: 100.0%;">             <div style="width: 220px;">                 <h4>訪問順序: 37</h4>                 <p><strong>地址:</strong> 西寮21號之8</p>                 <p><strong>鄰別:</strong> 2鄰</p>                 <p><strong>座標:</strong> 23.171584, 120.096381</p>             </div>             </div>`)[0];
+                popup_1d1ff65802d5006c6b7d08f376278b90.setContent(html_48fa9a435e87896ecf909720d335be54);
+            
+        
+
+        marker_600d30ae1f7a847dea24e4a869407daf.bindPopup(popup_1d1ff65802d5006c6b7d08f376278b90)
+        ;
+
+        
+    
+    
+            marker_600d30ae1f7a847dea24e4a869407daf.bindTooltip(
+                `<div>
+                     37. 西寮21號之8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_600d30ae1f7a847dea24e4a869407daf.setIcon(div_icon_7ec62e1a806c3b09aca345f59376567d);
+            
+    
+            var poly_line_9355dc192f3560e9ea3372cfe3eb60ea = L.polyline(
+                [[23.1691, 120.097141], [23.169737, 120.096955], [23.169889, 120.096909], [23.169929, 120.096739], [23.170052, 120.096616], [23.170159, 120.096606], [23.17024, 120.096527], [23.170304, 120.096457], [23.170447, 120.096477], [23.170542, 120.09638], [23.170573, 120.096355], [23.170566, 120.096233], [23.170671, 120.096204], [23.170797, 120.096176], [23.170902, 120.096098], [23.170974, 120.096048], [23.171105, 120.096029], [23.171205, 120.095988], [23.171304, 120.095964], [23.171376, 120.096131], [23.171444, 120.096239], [23.171284, 120.096318], [23.171148, 120.096369], [23.171109, 120.096226], [23.171176, 120.096205], [23.171233, 120.096161], [23.171033, 120.096196], [23.170988, 120.096263], [23.170831, 120.096362], [23.170706, 120.09634], [23.170515, 120.096641], [23.170319, 120.096703], [23.170252, 120.096734], [23.170182, 120.096769], [23.170096, 120.096826], [23.17042, 120.096993], [23.171584, 120.096381]],
+                {"bubblingMouseEvents": true, "color": "#FF6B6B", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF6B6B", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_a06ebd4be4061fa543fbf58547bdffd4);
+        
+    
+            poly_line_686336c2b5f6c2fdd9d8fe4b8e1e3749.setText(
+                "\u25ba",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "#FF6B6B",
+  "font-weight": "bold",
+  "font-size": "20",
+},
+}
+            );
+        
+</script>
+</html>

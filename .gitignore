@@ -1,0 +1,179 @@
+# ----------------
+# 作業系統檔案
+# ----------------
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+
+# ----------------
+# 編輯器和 IDE
+# ----------------
+# VSCode
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# ----------------
+# 臨時檔案和快取
+# ----------------
+# 一般臨時檔案
+*.tmp
+*.temp
+*.log
+*.cache
+
+# Python 相關（如果有用到 Python 處理資料）
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Node.js 相關（如果有用到前端工具）
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ----------------
+# 資料處理相關
+# ----------------
+# 原始資料檔案（避免上傳大型資料檔案）
+data/raw/
+*.csv.backup
+*.xlsx.backup
+
+# 處理中的暫存檔案
+temp/
+processing/
+backup/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# ----------------
+# 地圖和圖片相關
+# ----------------
+# 大型圖片檔案（超過 100MB 的檔案 GitHub 不允許）
+*.tif
+*.tiff
+*.raw
+
+# 備份的地圖檔案
+*.html.backup
+maps_backup/
+
+# 截圖和測試圖片
+screenshots/
+test_images/
+
+# ----------------
+# 部署相關
+# ----------------
+# 部署腳本產生的檔案
+deploy/
+dist/
+build/
+
+# ----------------
+# 安全性相關
+# ----------------
+# 環境變數檔案
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# API 金鑰和敏感資料
+config/secrets.js
+api_keys.txt
+credentials.json
+
+# ----------------
+# 文件產生相關
+# ----------------
+# LaTeX
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+
+# PDF 暫存檔案
+*.pdf.tmp
+
+# ----------------
+# 專案特定忽略
+# ----------------
+# 如果有用腳本產生大量檔案
+generated_maps/
+bulk_export/
+
+# 測試用的地圖檔案
+test_maps/
+experimental/
+
+# 壓縮檔案（通常太大）
+*.zip
+*.rar
+*.tar.gz
+*.7z
+
+# ----------------
+# 其他
+# ----------------
+# 錯誤報告
+error_reports/
+crash_logs/
+
+# 效能分析檔案
+*.prof
+
